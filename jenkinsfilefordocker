@@ -1,7 +1,12 @@
 node{
-stage('SCM checkout'){
-
-git credentialsId: 'dockerHUB', url: 'https://github.com/pooja87pawar/poojaproject.git'
+stage ('scm checkout') {
+git credentialsId: 'dockerHUB', url: 'https://github.com/pooja87pawar/poojaproject.git'aa
 }
-
+stage ('Checkout to different branch') {
+sh "git branch -r"
+sh "git checkout master"
+}
+stage ('package stage') {
+sh label: '', script: 'mvn clean package '
+}
 }

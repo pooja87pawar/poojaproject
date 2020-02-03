@@ -14,7 +14,7 @@ sh label: '', script: 'mvn clean package '
 }
 stage ('docker image build') 
 {
-sh 'docker build -t pkw0301/prakash-app:1.0.0 .'
+sh 'docker build -t tdspooja/poojaproject:1.0.0 .'
 }
 }
 

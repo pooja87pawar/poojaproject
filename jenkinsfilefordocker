@@ -1,1 +1,7 @@
+node{
+stage('SCM checkout'){
 
+git credentialsId: 'dockerHUB', url: 'https://github.com/pooja87pawar/poojaproject.git'
+}
+
+}

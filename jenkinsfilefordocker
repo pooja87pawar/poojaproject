@@ -1,12 +1,21 @@
 node{
-stage ('scm checkout') {
+stage ('scm checkout')
+{
 git credentialsId: 'dockerHUB', url: 'https://github.com/pooja87pawar/poojaproject.git'aa
 }
-stage ('Checkout to different branch') {
+stage ('Checkout to different branch')
+{
 sh "git branch -r"
 sh "git checkout master"
 }
-stage ('package stage') {
+stage ('package stage') 
+{
 sh label: '', script: 'mvn clean package '
 }
+stage ('docker image build') 
+{
+sh 'docker build -t pkw0301/prakash-app:1.0.0 .'
 }
+}
+
+

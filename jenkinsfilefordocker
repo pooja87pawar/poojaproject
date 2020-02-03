@@ -6,7 +6,6 @@ git credentialsId: 'dockerHUB', url: 'https://github.com/pooja87pawar/poojaproje
 stage ('Checkout to different branch')
 {
 sh "git branch -r"
-sh "git checkout master"
 }
 stage ('package stage') 
 {

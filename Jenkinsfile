@@ -17,7 +17,7 @@ pipeline {
             }
         }
 
-        stage ('Testing Stage') {
+        stage ('Testing Stage 1') {
 
             steps {
                 withMaven(maven : 'LocalMaven') {
